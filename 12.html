@@ -1,0 +1,112 @@
+<form>
+    <!defines the form for user i/p and send it to the server, it includes fields like text i/p,radio buttons,dropdowns and submit button-->
+    <fieldset>
+        <legend>hello guys</legend>
+        <form action="/submit-form" method="POST">
+           <label for="eng">eng:</label>
+           <input type="checkbox" id="eng" name="sub" value="E">
+           <br>
+           <label for="sst">sst:</label>
+           <input type="checkbox" id="sst" name="sub" value="M">
+           <br>
+           <label for="math">math:</label>
+           <input type="checkbox" id="math" name="sub" value="S">
+        </form>
+    </fieldset>
+</form>
+
+<form>
+    <fieldset>
+        <legend>
+            fill the form
+        </legend>
+        <form action="/submit-form" method="GET">
+            <input type="text" id="text" name="text">
+            <label for="text">Text</label>
+            <br>
+            <input type="email" id="email" name="email">
+            <label for="email">email</label>
+            <br>
+            <input type="password" id="password" name="password">
+            <label for="password">password</label>
+
+            <label for="select">
+                <select id="select" name="select">
+                    <option value="option1">option 1</option>
+                    <option value="option2">option 2</option>
+                    <option value="option3">option 3</option>
+                </select>
+            </label>
+        </form>
+    </fieldset>
+</form>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+</head>
+<body>
+
+    <form action="#" method="post">
+        <!-- Text Field -->
+        <label for="text">Text Input:</label>
+        <input type="text" id="text" name="text"><br><br>
+
+        <!-- Email Field -->
+        <label for="email">Email Input:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <!-- Password Field -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+
+        <!-- Radio Buttons -->
+        <label>Choose an option:</label><br>
+        <input type="radio" id="option1" name="radioGroup" value="Option 1">
+        <label for="option1">Option 1</label>
+        <input type="radio" id="option2" name="radioGroup" value="Option 2">
+        <label for="option2">Option 2</label><br><br>
+
+        <!-- Checkbox -->
+        <label>Select your preferences:</label><br>
+        <input type="checkbox" id="checkbox1" name="checkboxGroup" value="Choice 1">
+        <label for="checkbox1">Choice 1</label>
+        <input type="checkbox" id="checkbox2" name="checkboxGroup" value="Choice 2">
+        <label for="checkbox2">Choice 2</label><br><br>
+
+        <!-- Textarea -->
+        <label for="textarea">Your Message:</label><br>
+        <textarea id="textarea" name="textarea" rows="4" cols="30"></textarea><br><br>
+
+        <!-- Dropdown List -->
+        <label for="select">Select an option:</label>
+        <select id="select" name="select">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select><br><br>
+
+        <!-- Submit and Reset Buttons -->
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+</html>
+
+
+<!GET method sends form data as part of the URL and data is visible to the URL-->
+<!POST method sends data in the request body and more secure than GET and is used for login,regustration and file uploads-->
+<!PUT methos is used to update existing data and requires an API endpoint to handle requests-->
+<!DIALOG created a popup box for user input-->
+
+<!FORM-ACTION  attribute specifies where the form data should be sent
+action="" submits to the same page and used in self processing forms
+action=# reloads the page and prevent navi
+action="/submit-form": sends to a relative URL and forms on the same domain
+action="https://": sends an absolute URL and submitting to external sites
+action="javascript:void(0);"	Prevents submission (JS handles it) and AJAX-based or dynamic forms.
+action="mailto:someone@example.com"	Sends form data via email and Contact forms without a backend.-->

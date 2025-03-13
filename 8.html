@@ -1,0 +1,49 @@
+
+<figure>
+    <figcaption>Listen to the T-Rex:</figcaption>
+    <audio controls src="/shared-assets/audio/t-rex-roar.mp3"></audio>
+    <a href="/shared-assets/audio/t-rex-roar.mp3"> Download audio </a>
+  </figure>
+
+  
+
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML &lt;base&gt; Element Example</title>
+
+    <!-- The <base> element specifies the base URL for all relative URLs in the document. -->
+    <!-- Only the first <base> element in the document is considered if multiple are present. -->
+    <base href="https://example.com/" target="_blank">
+
+    <!-- The href attribute defines the base URL for relative links. -->
+    <!-- The target attribute sets the default browsing context for links and forms. -->
+    <!-- Allowed target values: -->
+    <!-- _self: Opens the link in the same browsing context (default). -->
+    <!-- _blank: Opens the link in a new tab or window. -->
+    <!-- _parent: Opens the link in the parent browsing context (if inside a frame). -->
+    <!-- _top: Opens the link in the topmost browsing context. -->
+    
+    <link rel="stylesheet" href="styles.css"> <!-- Resolves to https://example.com/styles.css -->
+</head>
+<body>
+    <h1>Understanding the &lt;base&gt; Element</h1>
+    
+    <!-- Example of a relative link, which resolves based on the <base> element -->
+    <a href="about.html">About Us</a> <!-- Resolves to https://example.com/about.html -->
+    <br>
+    <a href="#section">Go to Section</a> <!-- Resolves to https://example.com/#section -->
+    
+    <!-- The base URI of this document can be accessed using JavaScript -->
+    <script>
+        console.log("Document Base URI: ", document.baseURI);
+    </script>
+
+    <!-- Important Notes: -->
+    <!-- If no <base> element is defined, baseURI defaults to the document's location.href. -->
+    <!-- The <base> element must come before any elements that use relative URLs (e.g., <link>, <script>, <img>, <a>). -->
+    <!-- If the target attribute contains an ASCII newline, tab, or '<', it resets to _blank for security reasons. -->
+</body>
+</html>
